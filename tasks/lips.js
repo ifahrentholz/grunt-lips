@@ -84,6 +84,7 @@ module.exports = function (grunt) {
       res.setHeader("Last-Modified", options.expiryDate);
 
       gm(width, height, background)
+        .fill(foreground)
         .font("Arial", 20)
         .drawText(0, 0, text, "center", foreground)
         .toBuffer(imageType, function(err, buffer) {
