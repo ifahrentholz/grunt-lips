@@ -86,7 +86,7 @@ module.exports = function (grunt) {
       gm(width, height, background)
         .fill(foreground)
         .font("Arial", 20)
-        .drawText(0, 0, text, "center", foreground)
+        .drawText(0, 0, text, "center")
         .toBuffer(imageType, function(err, buffer) {
           if(err) {
             console.log(err);
