@@ -45,7 +45,7 @@ grunt.initConfig({
 Type: `String`
 Default value: `"lips"`
 
-A string value for the namespace e.g. http://localhost/lips/350x150 
+A string value for the namespace e.g. http://localhost/lips/...
 
 #### options.port
 Type: `Integer`
@@ -104,6 +104,10 @@ grunt.initConfig({
   },
 })
 ```
+
+## Server URL: 
+    http://localhost:3000/gen/550x250.png?color=000000&bg=bada55&text=[Text]
+
 
 ## Release History
 _(Nothing yet)_

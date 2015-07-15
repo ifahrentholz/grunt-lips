@@ -27,13 +27,13 @@ module.exports = function (grunt) {
       namespace: "lips",
       port: 3000,
       imageType: "png",
-      fgColor: "181818",
+      color: "181818",
       bgColor: "e1e1e1",
       maxAge: 3153600,
       expiryDate: new Date(0)
     });
 
-    app.get('/'+ options.namespace +'/:dimension.:imageType?/:fgColor?/:bgColor?/:text?', function(req, res, next) {
+    app.get('/'+ options.namespace +'/:dimension.:imageType', function(req, res, next) {
       var dim = req.params.dimension.split('x');
       var width, height, foreground, background, imageType, text;
 
@@ -47,16 +47,16 @@ module.exports = function (grunt) {
       if(isNaN(width) || isNaN(height)) return next();
 
 
-      if(typeof req.params.fgColor !== 'undefined') {
-        foreground = req.params.fgColor;
+      if(typeof req.query.color !== 'undefined') {
+        foreground = req.query.color;
       } else {
-        foreground = options.fgColor;
+        foreground = options.color;
       }
       if(foreground[0] !== '#') foreground = '#' + foreground;
 
 
-      if(typeof req.params.bgColor !== 'undefined') {
-        background = req.params.bgColor;
+      if(typeof req.query.bg !== 'undefined') {
+        background = req.query.bg;
       } else {
         background = options.bgColor;
       }
@@ -70,10 +70,10 @@ module.exports = function (grunt) {
       }
       imageType = imageType.toLowerCase();
 
-      if(typeof req.params.text !== 'undefined') {
+      if(typeof req.query.text !== 'undefined') {
         // TODO handle case when the text is too long for the image
-        //text = req.params.text;
-        text = width + " x " + height;
+        text = req.query.text;
+        //text = width + " x " + height;
       } else {
         text = width + " x " + height;
       }
