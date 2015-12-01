@@ -6,11 +6,11 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+"use strict";
 
 module.exports = function (grunt) {
   // load all npm grunt tasks
-  require('load-grunt-tasks')(grunt);
+  require("load-grunt-tasks")(grunt);
 
   // Project configuration.
   grunt.initConfig({
@@ -21,15 +21,15 @@ module.exports = function (grunt) {
     },
 
     nodeunit: {
-      tests: ['test/*_test.js']
+      tests: ["test/*_test.js"]
     }
 
   });
 
   // Actually load this plugin's task(s).
-  grunt.loadTasks('tasks');
+  grunt.loadTasks("tasks");
 
   // default task
-  grunt.registerTask('default', ['lips']);
+  grunt.registerTask("default", ["lips"]);
 
 };

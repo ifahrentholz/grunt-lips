@@ -30,12 +30,13 @@ module.exports = function (grunt) {
       color: "181818",
       bgColor: "e1e1e1",
       maxAge: 3153600,
+      delay: false,
       expiryDate: new Date(0)
     });
 
     app.get('/'+ options.namespace +'/:dimension.:imageType', function(req, res, next) {
       var dim = req.params.dimension.split('x');
-      var width, height, foreground, background, imageType, text;
+      var width, height, foreground, background, imageType, text, delay;
 
 
       if(dim.length === 1) {
@@ -70,6 +71,12 @@ module.exports = function (grunt) {
       }
       imageType = imageType.toLowerCase();
 
+      if (typeof req.query.delay !== "undefined") {
+        delay = req.query.delay;
+      } else {
+        delay = options.delay;
+      }
+
       if(typeof req.query.text !== 'undefined') {
         // TODO handle case when the text is too long for the image
         text = req.query.text;
@@ -88,11 +95,17 @@ module.exports = function (grunt) {
         .font("Arial", 20)
         .drawText(0, 0, text, "center")
         .toBuffer(imageType, function(err, buffer) {
-          if(err) {
+          if (err) {
             console.log(err);
             next();
           }
-          res.send(buffer);
+          if (delay) {
+            setTimeout(function() {
+              res.send(buffer);
+            }, delay);
+          } else {
+            res.send(buffer);
+          }
         });
 
     });
