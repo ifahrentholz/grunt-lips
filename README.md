@@ -73,6 +73,10 @@ Default value: `3153600`
 Type: `Object`
 Default value: `new Date(0)`
 
+#### options.delay (in ms)
+Type: `Integer`
+Default value: `0`
+
 ### Usage Examples
 
 #### Default Options
@@ -99,14 +103,15 @@ grunt.initConfig({
       fgColor: "000000",
       bgColor: "bada55",
       maxAge: 3153600,
-      expiryDate: new Date(0)
+      expiryDate: new Date(0),
+      delay: 5000
     }
   },
 })
 ```
 
 ## Server URL: 
-    http://localhost:3000/gen/550x250.png?color=000000&bg=bada55&text=[Text]
+    http://localhost:3000/gen/550x250.png?color=000000&bg=bada55&text=[Text]&delay=5000
 
 
 ## Release History
