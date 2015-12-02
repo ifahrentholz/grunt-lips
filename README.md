@@ -110,12 +110,14 @@ grunt.initConfig({
 })
 ```
 
+
 ## Server URL: 
     http://localhost:3000/gen/550x250.png?color=000000&bg=bada55&text=[Text]&delay=5000
 
 
-## Release History
-_(Nothing yet)_
+## PLEASE NOTE:
+> To run this service alongside with your watch task I highly recommend using the [grunt-concurrent plugin](https://github.com/sindresorhus/grunt-concurrent)
+
 
 ## License
 Copyright (c) 2015 Ingo Fahrentholz. Licensed under the MIT license.
