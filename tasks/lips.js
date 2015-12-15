@@ -8,6 +8,7 @@
 
 'use strict';
 
+var extend = require("node.extend");
 var lips = require('node-img-placeholder');
 
 module.exports = function (grunt) {
@@ -20,8 +21,20 @@ module.exports = function (grunt) {
     var done = this.async();
 
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options(App.networkSettings, App.imageSettings);
+    var gruntOptions = this.options();
+    var appImageOptions = App.settings.image;
+    var appNetworkOptions = App.settings.network;
 
+    var mergeNetwork = extend({}, appNetworkOptions, gruntOptions.network);
+    var mergeImage = extend({}, appImageOptions, gruntOptions.image);
+
+    var options = {};
+    options.network = mergeNetwork;
+    options.image = mergeImage;
+
+    App.settings = extend({}, App.settings, options);
+
+    // Start the service
     lips(options);
 
   });

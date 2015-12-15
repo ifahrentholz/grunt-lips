@@ -16,8 +16,19 @@ module.exports = function (grunt) {
   grunt.initConfig({
     lips: {
       options: {
+        image: {
+          font: "Arial",
+          fontSize: "24px",
+          fontColor: "ffffff",
+          text: true,
+          fill: "09F"
+        },
         network: {
-          port: 1337
+          port: process.env.PORT || 3000,
+          delay: 0,
+          contentType: "png",
+          maxAge: 3153600,
+          expiryDate: new Date()
         }
       }
     },
