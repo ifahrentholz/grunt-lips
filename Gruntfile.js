@@ -16,7 +16,9 @@ module.exports = function (grunt) {
   grunt.initConfig({
     lips: {
       options: {
-        port: 1337
+        network: {
+          port: 1337
+        }
       }
     },
 
