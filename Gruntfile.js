@@ -16,20 +16,16 @@ module.exports = function (grunt) {
   grunt.initConfig({
     lips: {
       options: {
-        image: {
-          font: "Arial",
-          fontSize: "24px",
-          fontColor: "ffffff",
-          text: true,
-          fill: "09F"
-        },
-        network: {
-          port: process.env.PORT || 3000,
-          delay: 0,
-          contentType: "png",
-          maxAge: 3153600,
-          expiryDate: new Date()
-        }
+        font: "Impact.ttf",
+        fontSize: "24px",
+        fontColor: "000000",
+        text: "GruntLIPS",
+        fill: "bada55",
+        port: process.env.PORT || 3000,
+        delay: 0,
+        contentType: "png",
+        maxAge: 3153600,
+        expiryDate: new Date()
       }
     },
 

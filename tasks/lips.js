@@ -22,20 +22,11 @@ module.exports = function (grunt) {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var gruntOptions = this.options();
-    var appImageOptions = App.settings.image;
-    var appNetworkOptions = App.settings.network;
 
-    var mergeNetwork = extend({}, appNetworkOptions, gruntOptions.network);
-    var mergeImage = extend({}, appImageOptions, gruntOptions.image);
-
-    var options = {};
-    options.network = mergeNetwork;
-    options.image = mergeImage;
-
-    App.settings = extend({}, App.settings, options);
+    App.settings = extend({}, App.settings, gruntOptions);
 
     // Start the service
-    lips(options);
+    lips(App.settings);
 
   });
 

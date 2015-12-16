@@ -1,6 +1,6 @@
 {
   "name": "grunt-lips",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "local image placeholder service",
   "homepage": "https://github.com/ifahrentholz/grunt-lips",
   "repository": "https://github.com/ifahrentholz/grunt-lips",
@@ -37,7 +37,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "node-img-placeholder": "^1.0.1",
+    "node-img-placeholder": "^1.1.0",
     "node.extend": "^1.1.5"
   }
 }
