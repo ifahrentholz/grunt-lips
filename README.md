@@ -1,8 +1,3 @@
-# lips v1.1.1
-
-> local image placeholder service
-
-
 # LIPS v1.1.1
 
 > local image placeholder service
