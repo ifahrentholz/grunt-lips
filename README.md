@@ -1,26 +1,25 @@
-# lips v1.0.0
+# lips v1.1.0
 
 > local image placeholder service
 
+
 ## Install dependencies
-The LIPS service was rewritten and depends now on [Cairo](http://cairographics.org/)
+The LIPS service was rewritten and depends now on [GraphicsMagick](http://www.graphicsmagick.org/)
 
-| OS | Command |
-| ----- | ----- |
-| OS X | `brew install pkg-config cairo libpng jpeg giflib` |
-| Ubuntu | `sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++` |
-| Fedora | `sudo yum install cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel` |
-| Solaris | `pkgin install cairo pkg-config xproto renderproto kbproto xextproto` |
-| Windows | [Instructions on this wiki](https://github.com/Automattic/node-canvas/wiki/Installation---Windows) |
+#### OSX
 
-**El Capitan users:** If you have recently updated to El Capitan and are experiencing trouble when compiling, run the following command: `xcode-select --install`. Read more about the problem [on Stack Overflow](http://stackoverflow.com/a/32929012/148072).
+    brew install graphicsmagick
+    
+#### Ubuntu
 
-**OSX: no ldconfig error:** 
+    sudo add-apt-repository ppa:dhor/myway
+    sudo apt-get update
+    sudo apt-get install graphicsmagick
+    
+#### Windows (binary download)
 
-    sudo echo > /usr/local/bin/ldconfig
-    sudo chmod +x /usr/local/bin/ldconfig
-    npm install
-    sudo rm -f /usr/local/bin/ldconfig
+    ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/windows/
+
 
 ## Getting Started
 This plugin requires Grunt.
@@ -40,20 +39,22 @@ grunt.loadNpmTasks('grunt-lips');
 ## The "lips" task
 
 #### Configure the LIPS via URL parameters:
+> Settings
 
 | setting | default | type | parameter
 | --------| ------- | ---- | ----------|
+| port | 3000 | Integer | - | 
+| env | development | String | - |
 | delay | 0 | Integer | &delay=5000 |
 | contentType | "png" | String | .png |
 | maxAge | 3153600 | Integer | &maxAge=0 |
 | expiryDate| new Date() | DateTime | &expiryDate=[DATETIME] |
-| font | Arial | String | &font=Arial |
 | fontSize | 24px | String | &fontSize=12px |
 | fontColor | 000000 | HEX | &fontColor=fff000 |
-| text | true | Boolean | &text=false |
+| text | - | String | &text=Hallo Welt |
 | fill | 09F | HEX | &fill=bada55 |
 
-> example: http://localhost:3000/lips/200x133.png?delay=1000&maxAge=0&font=Arial&fontSize=23px&fontColor=000000&text=true&fill=bada55
+> example: http://localhost:3000/lips/200x133.png?delay=1000&maxAge=0&font=Arial&fontSize=23px&fontColor=000000&text=CText&fill=bada55
 
 #### Configure the LIPS via Grunt options:
 
@@ -61,22 +62,18 @@ grunt.loadNpmTasks('grunt-lips');
 grunt.initConfig({
   lips: {
     options: {
-      image: {
-        font: "Arial",
-        fontSize: "24px",
-        fontColor: "ffffff",
-        text: true,
-        fill: "09F"
-      },
-      network: {
-        port: process.env.PORT || 3000,
-        delay: 0,
-        contentType: "png",
-        maxAge: 3153600,
-        expiryDate: new Date()
-      }
+      font: "Impact.ttf",
+      fontSize: "24px",
+      fontColor: "000000",
+      text: "GruntLIPS",
+      fill: "bada55",
+      port: process.env.PORT || 1337,
+      delay: 0,
+      contentType: "png",
+      maxAge: 3153600,
+      expiryDate: new Date()
     }
-  },
+  }
 })
 ```
 

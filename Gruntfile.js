@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         fontColor: "000000",
         text: "GruntLIPS",
         fill: "bada55",
-        port: process.env.PORT || 3000,
+        port: process.env.PORT || 1337,
         delay: 0,
         contentType: "png",
         maxAge: 3153600,
