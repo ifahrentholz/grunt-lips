@@ -3,6 +3,7 @@
 > local image placeholder service
 
 ## Install dependencies
+
 The LIPS service was rewritten and depends now on:
 - [GraphicsMagick](http://www.graphicsmagick.org/)
 - [Ghostscript](http://www.ghostscript.com/)
