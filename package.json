@@ -1,9 +1,11 @@
 {
   "name": "grunt-lips",
-  "version": "1.1.2",
   "description": "local image placeholder service",
   "homepage": "https://github.com/ifahrentholz/grunt-lips",
-  "repository": "https://github.com/ifahrentholz/grunt-lips",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifahrentholz/grunt-lips.git"
+  },
   "author": {
     "name": "Ingo Fahrentholz",
     "email": "ingof.work@gmail.com",
@@ -28,16 +30,23 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "extend-grunt-plugin": "^0.1.0",
-    "grunt": "^0.4.5",
-    "grunt-contrib-nodeunit": "^0.4.1",
-    "load-grunt-tasks": "^3.3.0"
+    "cz-conventional-changelog": "1.1.5",
+    "extend-grunt-plugin": "0.1.0",
+    "grunt": "0.4.5",
+    "grunt-contrib-nodeunit": "0.4.1",
+    "load-grunt-tasks": "3.4.0",
+    "semantic-release": "^4.3.5"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "echo 'Error: no test specified'",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
-    "node-img-placeholder": "^1.1.1",
-    "node.extend": "^1.1.5"
+    "node-img-placeholder": "2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
