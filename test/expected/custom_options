@@ -1,1 +1,10 @@
-Testing: 1 2 3 !!!
+font: "Arial.ttf",
+fontSize: "144px",
+fontColor: "000000",
+text: "custom text",
+fill: "bada55",
+port: process.env.PORT || 1337,
+delay: 0,
+contentType: "png",
+maxAge: 1337,
+expiryDate: new Date()

@@ -16,10 +16,10 @@ module.exports = function (grunt) {
   grunt.initConfig({
     lips: {
       options: {
-        font: "Impact.ttf",
-        fontSize: "24px",
+        font: "Arial.ttf",
+        fontSize: "14px",
         fontColor: "000000",
-        text: "GruntLIPS",
+        text: "custom text",
         fill: "bada55",
         port: process.env.PORT || 1337,
         delay: 0,

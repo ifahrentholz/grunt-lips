@@ -23,10 +23,8 @@ module.exports = function (grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var gruntOptions = this.options();
 
-    App.settings = extend({}, App.settings, gruntOptions);
-
     // Start the service
-    lips(App.settings);
+    lips(gruntOptions);
 
   });
 

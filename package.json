@@ -40,7 +40,7 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "test": "echo 'Error: no test specified'",
+    "test": "grunt nodeunit",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
