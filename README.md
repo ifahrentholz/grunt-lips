@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/dt/grunt-lips.svg?style=flat-square)]()
+
 # LIPS v1.1.2
 
 > local image placeholder service
