@@ -1,6 +1,7 @@
 {
   "name": "grunt-lips",
   "description": "local image placeholder service",
+  "version": "0.0.0-semantically-released",
   "homepage": "https://github.com/ifahrentholz/grunt-lips",
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "semantic-release": "^4.3.5"
   },
   "scripts": {
+    "commit": "git-cz",
     "test": "echo 'Error: no test specified'",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
