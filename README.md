@@ -1,3 +1,9 @@
+[![Travis](https://img.shields.io/travis/ifahrentholz/grunt-lips.svg?style=flat-square)]()
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+
+
+[![npm](https://img.shields.io/npm/l/grunt-lips.svg?style=flat-square)]()
+[![node](https://img.shields.io/node/v/grunt-lips.svg?style=flat-square)]()
 [![npm](https://img.shields.io/npm/dt/grunt-lips.svg?style=flat-square)]()
 
 # LIPS
