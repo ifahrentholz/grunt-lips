@@ -33,6 +33,7 @@
   "devDependencies": {
     "cz-conventional-changelog": "1.1.5",
     "extend-grunt-plugin": "0.1.0",
+    "ghooks": "1.0.3",
     "grunt": "0.4.5",
     "grunt-contrib-nodeunit": "0.4.1",
     "load-grunt-tasks": "3.4.0",
@@ -49,6 +50,9 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run test"
     }
   }
 }
