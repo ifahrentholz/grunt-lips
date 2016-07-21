@@ -65,10 +65,10 @@ grunt.loadNpmTasks('grunt-lips');
 | contentType | "png" | String | .png |
 | maxAge | 3153600 | Integer | &maxAge=0 |
 | expiryDate| new Date() | DateTime | &expiryDate=[DATETIME] |
-| fontSize | 24px | String | &fontSize=12px |
-| fontColor | 000000 | HEX | &fontColor=fff000 |
-| text | - | String | &text=Hallo Welt |
-| fill | 09F | HEX | &fill=bada55 |
+| txtsize | 24px | String | &txtsize=12px |
+| txtclr | 000000 | HEX | &txtclr=fff000 |
+| txt | - | String | &txt=Hallo Welt |
+| bg | 09F | HEX | &bg=bada55 |
 
 > example: http://localhost:3000/lips/200x133.png?delay=1000&maxAge=0&font=Arial&fontSize=23px&fontColor=000000&text=CText&fill=bada55
 
@@ -79,10 +79,10 @@ grunt.initConfig({
   lips: {
     options: {
       font: "Impact.ttf",
-      fontSize: "24px",
-      fontColor: "000000",
-      text: "GruntLIPS",
-      fill: "bada55",
+      txtsize: "24px",
+      txtclr: "000000",
+      txt: "GruntLIPS",
+      bg: "bada55",
       port: process.env.PORT || 1337,
       delay: 0,
       contentType: "png",
