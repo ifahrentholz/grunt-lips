@@ -38,7 +38,8 @@
     "grunt-contrib-nodeunit": "0.4.1",
     "load-grunt-tasks": "3.4.0",
     "node.extend": "1.1.5",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^4.3.5",
+    "cz-cli": "2.8.1"
   },
   "scripts": {
     "commit": "git-cz",
@@ -46,7 +47,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
-    "node-img-placeholder": "2.0.0"
+    "node-img-placeholder": "3.0.0"
   },
   "config": {
     "commitizen": {
