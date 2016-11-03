@@ -8,7 +8,6 @@
 
 'use strict';
 
-var extend = require("node.extend");
 var lips = require('node-img-placeholder');
 
 module.exports = function (grunt) {

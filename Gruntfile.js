@@ -16,6 +16,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     lips: {
       options: {
+        namespace: "lips",
         font: "Arial.ttf",
         fontSize: "14px",
         fontColor: "000000",

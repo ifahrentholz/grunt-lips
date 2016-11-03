@@ -59,15 +59,15 @@ grunt.loadNpmTasks('grunt-lips');
 
 | setting | default | type | parameter
 | --------| ------- | ---- | ----------|
-| port | 3000 | Integer | - |
-| env | development | String | - |
+| namespace | lips | String | [grunt-options] |
+| port | 3000 | Integer | [grunt-options] |
 | delay | 0 | Integer | &delay=5000 |
 | contentType | "png" | String | .png |
 | maxAge | 3153600 | Integer | &maxAge=0 |
 | expiryDate| new Date() | DateTime | &expiryDate=[DATETIME] |
 | txtsize | 24px | String | &txtsize=12px |
 | txtclr | 000000 | HEX | &txtclr=fff000 |
-| txt | - | String | &txt=Hallo Welt |
+| txt | [width]x[height] | String | &txt=hello |
 | bg | 09F | HEX | &bg=bada55 |
 
 > example: http://localhost:3000/lips/200x133.png?delay=1000&maxAge=0&font=Arial&fontSize=23px&fontColor=000000&text=CText&fill=bada55
