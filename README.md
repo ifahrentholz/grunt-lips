@@ -79,6 +79,7 @@ grunt.loadNpmTasks('grunt-lips');
 grunt.initConfig({
   lips: {
     options: {
+      namespace: "lips",
       fontFamily: "Impact.ttf",
       txtsize: "24px",
       txtclr: "000000",
