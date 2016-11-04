@@ -61,6 +61,7 @@ grunt.loadNpmTasks('grunt-lips');
 | --------| ------- | ---- | ----------|
 | namespace | lips | String | [grunt-options] |
 | port | 3000 | Integer | [grunt-options] |
+| fontFamily | Arial | String | [grunt-options] |
 | delay | 0 | Integer | &delay=5000 |
 | contentType | "png" | String | .png |
 | maxAge | 3153600 | Integer | &maxAge=0 |
@@ -70,7 +71,7 @@ grunt.loadNpmTasks('grunt-lips');
 | txt | [width]x[height] | String | &txt=hello |
 | bg | 09F | HEX | &bg=bada55 |
 
-> example: http://localhost:3000/lips/200x133.png?delay=1000&maxAge=0&font=Arial&fontSize=23px&fontColor=000000&text=CText&fill=bada55
+> example: http://localhost:3000/lips/200x133.png?delay=1000&maxAge=0&txtsize=23px&txtclr=000000&txt=CText&bg=bada55
 
 #### Configure the LIPS via Grunt options:
 
@@ -78,7 +79,7 @@ grunt.loadNpmTasks('grunt-lips');
 grunt.initConfig({
   lips: {
     options: {
-      font: "Impact.ttf",
+      fontFamily: "Impact.ttf",
       txtsize: "24px",
       txtclr: "000000",
       txt: "GruntLIPS",
