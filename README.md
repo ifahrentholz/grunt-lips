@@ -63,7 +63,7 @@ grunt.loadNpmTasks('grunt-lips');
 | port | 3000 | Integer | [grunt-options] |
 | fontFamily | Arial | String | [grunt-options] |
 | delay | 0 | Integer | &delay=5000 |
-| contentType | "png" | String | .png |
+| contentType | png | String | .png |
 | maxAge | 3153600 | Integer | &maxAge=0 |
 | expiryDate| new Date() | DateTime | &expiryDate=[DATETIME] |
 | txtsize | 24px | String | &txtsize=12px |
