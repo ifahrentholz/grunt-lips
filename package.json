@@ -39,7 +39,7 @@
     "semantic-release": "15.13.3"
   },
   "scripts": {
-    "commit": "git-cz",
+    "commit": "npx git-cz",
     "test": "grunt nodeunit",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
