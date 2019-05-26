@@ -4,3 +4,4 @@ tmp
 .DS_Store
 .idea
 .editorconfig
+package-lock.json
