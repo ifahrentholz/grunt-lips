@@ -1,14 +1,14 @@
 sudo: false
 language: node_js
-cache:
-  directories:
-    - node_modules
 notifications:
   email: false
 node_js:
   - "10.15.3"
+cache:
+  npm: true,
+  directories:
+    - "node_modules"
 before_install:
-  - npm i -g npm
   - npm install -g grunt-cli
 before_script:
   - npm prune
