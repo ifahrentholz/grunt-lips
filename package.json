@@ -44,7 +44,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
-    "node-img-placeholder": "4.1.1"
+    "node-img-placeholder": "4.1.5"
   },
   "config": {
     "commitizen": {
