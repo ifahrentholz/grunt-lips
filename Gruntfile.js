@@ -8,7 +8,7 @@
 
 "use strict";
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // load all npm grunt tasks
   require("load-grunt-tasks")(grunt);
 
@@ -18,10 +18,10 @@ module.exports = function (grunt) {
       options: {
         namespace: "lips",
         font: "Arial.ttf",
-        fontSize: "14px",
-        fontColor: "000000",
-        text: "custom text",
-        fill: "bada55",
+        txtsize: "14px",
+        txtclr: "bada55",
+        txt: "custom text",
+        bg: "000000",
         port: process.env.PORT || 1337,
         delay: 0,
         contentType: "png",
@@ -33,7 +33,6 @@ module.exports = function (grunt) {
     nodeunit: {
       tests: ["test/*_test.js"]
     }
-
   });
 
   // Actually load this plugin's task(s).
@@ -41,5 +40,4 @@ module.exports = function (grunt) {
 
   // default task
   grunt.registerTask("default", ["lips"]);
-
 };
