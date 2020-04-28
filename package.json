@@ -42,7 +42,7 @@
     "test": "grunt nodeunit"
   },
   "dependencies": {
-    "node-img-placeholder": "4.1.6"
+    "node-img-placeholder": "4.1.7"
   },
   "config": {
     "commitizen": {
