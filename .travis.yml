@@ -7,7 +7,7 @@ os:
 notifications:
   email: false
 node_js:
-  - "10.15.3"
+  - "10.24.1"
 cache:
   npm: true,
   directories:
